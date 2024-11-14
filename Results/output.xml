@@ -1,0 +1,2867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.6 on win32)" generated="2024-11-13T09:29:15.129770" rpa="false" schemaversion="5">
+<suite id="s1" name="API Test" source="C:\Users\Wilawan\Desktop\WORK\Training\Interview\OPN_Assignment\Results\..\API_Test.robot">
+<test id="s1-t1" name="Test_Case_001" line="36">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.362443" level="INFO">${real_id} = 1</msg>
+<var>${real_id}</var>
+<arg>${id}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.362443" elapsed="0.000000"/>
+</kw>
+<kw name="Retrieve Input">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.362443" level="INFO">${user_details_url} = https://jsonplaceholder.typicode.com/users/1</msg>
+<var>${user_details_url}</var>
+<arg>${url}/${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.362443" elapsed="0.000000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:15.362443" level="INFO">Creating Session using : alias=TestAPI, url=https://jsonplaceholder.typicode.com/users, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>TestAPI</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-13T09:29:15.362443" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:15.500186" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users/1 
+ path_url=/users/1 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-11-13T09:29:15.500186" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users/1 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 13 Nov 2024 02:29:14 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731016597&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=bd%2F6qiIeqIYZuF2cAbnLUnqbMlZmqvnYH8VILTdhRTY%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731016597&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=bd%2F6qiIeqIYZuF2cAbnLUnqbMlZmqvnYH8VILTdhRTY%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '989', 'X-Ratelimit-Reset': '1731016618', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"1fd-+2Y3G3w049iSZtw5t1mzSnunngE"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '15790', 'Server': 'cloudflare', 'CF-RAY': '8e1b55405d6a8807-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=25360&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2841&amp;recv_bytes=785&amp;delivery_rate=114115&amp;cwnd=180&amp;unsent_bytes=0&amp;cid=9a734b221e3eb5ea&amp;ts=41&amp;x=0"'} 
+ body={
+  "id": 1,
+  "name": "Leanne Graham",
+  "username": "Bret",
+  "email": "Sincere@april.biz",
+  "address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.1496"
+    }
+  },
+  "phone": "1-770-736-8031 x56442",
+  "website": "hildegard.org",
+  "company": {
+    "name": "Romaguera-Crona",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "harness real-time e-markets"
+  }
+} 
+ </msg>
+<msg time="2024-11-13T09:29:15.500186" level="INFO">C:\Users\Wilawan\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1056: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg time="2024-11-13T09:29:15.500186" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<var>${res}</var>
+<arg>TestAPI</arg>
+<arg>${user_details_url}</arg>
+<arg>expected_status=${normal_status}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.362443" elapsed="0.137743"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${normal_status}</arg>
+<arg>${res}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.500186" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${json_res} = {'id': 1, 'name': 'Leanne Graham', 'username': 'Bret', 'email': 'Sincere@april.biz', 'address': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92998-3874', 'geo': {'...</msg>
+<var>${json_res}</var>
+<arg>${res.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.500186" elapsed="0.015624"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${user_name} = Leanne Graham</msg>
+<var>${user_name}</var>
+<arg>${json_res}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${user_email} = Sincere@april.biz</msg>
+<var>${user_email}</var>
+<arg>${json_res}[email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${user_website} = hildegard.org</msg>
+<var>${user_website}</var>
+<arg>${json_res}[website]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${user_lat} = -37.3159</msg>
+<var>${user_lat}</var>
+<arg>${json_res}[address][geo][lat]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${user_lng} = 81.1496</msg>
+<var>${user_lng}</var>
+<arg>${json_res}[address][geo][lng]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${user_company_name} = Romaguera-Crona</msg>
+<var>${user_company_name}</var>
+<arg>${json_res}[company][name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.515810" level="INFO">Length is 13.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${name_result} = True</msg>
+<var>${name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${email_result} = True</msg>
+<var>${email_result}</var>
+<arg>Should Match</arg>
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${website_result} = True</msg>
+<var>${website_result}</var>
+<arg>Should Match</arg>
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${lat_result} = True</msg>
+<var>${lat_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${lng_result} = True</msg>
+<var>${lng_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.515810" level="INFO">Length is 13.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${company_name_result} = True</msg>
+<var>${company_name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${sum_result} = True</msg>
+<var>${sum_result}</var>
+<arg>Should Be True</arg>
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${user_name}</value>
+<value>${user_email}</value>
+<value>${user_website}</value>
+<value>${user_lat}</value>
+<value>${user_lng}</value>
+<value>${user_company_name}</value>
+<value>${sum_result}</value>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${user_name} = Leanne Graham</msg>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${user_email} = Sincere@april.biz</msg>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${user_website} = hildegard.org</msg>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${user_lat} = -37.3159</msg>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${user_lng} = 81.1496</msg>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${user_company_name} = Romaguera-Crona</msg>
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${record_valid_detail} = True</msg>
+<var>${user_name}</var>
+<var>${user_email}</var>
+<var>${user_website}</var>
+<var>${user_lat}</var>
+<var>${user_lng}</var>
+<var>${user_company_name}</var>
+<var>${record_valid_detail}</var>
+<arg>${real_id}</arg>
+<status status="PASS" start="2024-11-13T09:29:15.362443" elapsed="0.153367"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.515810" level="INFO">User Name: Leanne Graham, Email: Sincere@april.biz, Website: hildegard.org, lat: -37.3159, lng: 81.1496, Company Name: Romaguera-Crona, Record Validation: True</msg>
+<arg>User Name: ${user_name}, Email: ${user_email}, Website: ${user_website}, lat: ${user_lat}, lng: ${user_lng}, Company Name: ${user_company_name}, Record Validation: ${record_valid_detail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${record_valid_detail} == True">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.515810" level="INFO">User "Leanne Graham" get PASSED result</msg>
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</if>
+<var name="${id}">0</var>
+<status status="PASS" start="2024-11-13T09:29:15.362443" elapsed="0.153367"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.515810" level="INFO">${real_id} = 2</msg>
+<var>${real_id}</var>
+<arg>${id}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.000000"/>
+</kw>
+<kw name="Retrieve Input">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.522214" level="INFO">${user_details_url} = https://jsonplaceholder.typicode.com/users/2</msg>
+<var>${user_details_url}</var>
+<arg>${url}/${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.522214" elapsed="0.000000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:15.522214" level="INFO">Creating Session using : alias=TestAPI, url=https://jsonplaceholder.typicode.com/users, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>TestAPI</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-13T09:29:15.522214" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users/2 
+ path_url=/users/2 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users/2 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 13 Nov 2024 02:29:15 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731219543&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=WhXIriVzeuu6Q32O3kSq7PHNp2LHXqA%2BtA3VreF9Rro%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731219543&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=WhXIriVzeuu6Q32O3kSq7PHNp2LHXqA%2BtA3VreF9Rro%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '986', 'X-Ratelimit-Reset': '1731219562', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"1fd-XTG63SYhaP/Uo6/vgmARnL3rpBk"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '3062', 'Server': 'cloudflare', 'CF-RAY': '8e1b55411dda603a-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=25055&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2843&amp;recv_bytes=785&amp;delivery_rate=115547&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=782e45ea19c3ce84&amp;ts=44&amp;x=0"'} 
+ body={
+  "id": 2,
+  "name": "Ervin Howell",
+  "username": "Antonette",
+  "email": "Shanna@melissa.tv",
+  "address": {
+    "street": "Victor Plains",
+    "suite": "Suite 879",
+    "city": "Wisokyburgh",
+    "zipcode": "90566-7771",
+    "geo": {
+      "lat": "-43.9509",
+      "lng": "-34.4618"
+    }
+  },
+  "phone": "010-692-6593 x09125",
+  "website": "anastasia.net",
+  "company": {
+    "name": "Deckow-Crist",
+    "catchPhrase": "Proactive didactic contingency",
+    "bs": "synergize scalable supply-chains"
+  }
+} 
+ </msg>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">C:\Users\Wilawan\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1056: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<var>${res}</var>
+<arg>TestAPI</arg>
+<arg>${user_details_url}</arg>
+<arg>expected_status=${normal_status}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.522214" elapsed="0.114189"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${normal_status}</arg>
+<arg>${res}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${json_res} = {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'g...</msg>
+<var>${json_res}</var>
+<arg>${res.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${user_name} = Ervin Howell</msg>
+<var>${user_name}</var>
+<arg>${json_res}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${user_email} = Shanna@melissa.tv</msg>
+<var>${user_email}</var>
+<arg>${json_res}[email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${user_website} = anastasia.net</msg>
+<var>${user_website}</var>
+<arg>${json_res}[website]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${user_lat} = -43.9509</msg>
+<var>${user_lat}</var>
+<arg>${json_res}[address][geo][lat]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${user_lng} = -34.4618</msg>
+<var>${user_lng}</var>
+<arg>${json_res}[address][geo][lng]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${user_company_name} = Deckow-Crist</msg>
+<var>${user_company_name}</var>
+<arg>${json_res}[company][name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">Length is 12.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${name_result} = True</msg>
+<var>${name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${email_result} = True</msg>
+<var>${email_result}</var>
+<arg>Should Match</arg>
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${website_result} = True</msg>
+<var>${website_result}</var>
+<arg>Should Match</arg>
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${lat_result} = True</msg>
+<var>${lat_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${lng_result} = True</msg>
+<var>${lng_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">Length is 12.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${company_name_result} = True</msg>
+<var>${company_name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${sum_result} = True</msg>
+<var>${sum_result}</var>
+<arg>Should Be True</arg>
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${user_name}</value>
+<value>${user_email}</value>
+<value>${user_website}</value>
+<value>${user_lat}</value>
+<value>${user_lng}</value>
+<value>${user_company_name}</value>
+<value>${sum_result}</value>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${user_name} = Ervin Howell</msg>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${user_email} = Shanna@melissa.tv</msg>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${user_website} = anastasia.net</msg>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${user_lat} = -43.9509</msg>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${user_lng} = -34.4618</msg>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${user_company_name} = Deckow-Crist</msg>
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${record_valid_detail} = True</msg>
+<var>${user_name}</var>
+<var>${user_email}</var>
+<var>${user_website}</var>
+<var>${user_lat}</var>
+<var>${user_lng}</var>
+<var>${user_company_name}</var>
+<var>${record_valid_detail}</var>
+<arg>${real_id}</arg>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.120593"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">User Name: Ervin Howell, Email: Shanna@melissa.tv, Website: anastasia.net, lat: -43.9509, lng: -34.4618, Company Name: Deckow-Crist, Record Validation: True</msg>
+<arg>User Name: ${user_name}, Email: ${user_email}, Website: ${user_website}, lat: ${user_lat}, lng: ${user_lng}, Company Name: ${user_company_name}, Record Validation: ${record_valid_detail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${record_valid_detail} == True">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">User "Ervin Howell" get PASSED result</msg>
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</if>
+<var name="${id}">1</var>
+<status status="PASS" start="2024-11-13T09:29:15.515810" elapsed="0.120593"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.636403" level="INFO">${real_id} = 3</msg>
+<var>${real_id}</var>
+<arg>${id}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.000000"/>
+</kw>
+<kw name="Retrieve Input">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.645772" level="INFO">${user_details_url} = https://jsonplaceholder.typicode.com/users/3</msg>
+<var>${user_details_url}</var>
+<arg>${url}/${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.645772" elapsed="0.000000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:15.646259" level="INFO">Creating Session using : alias=TestAPI, url=https://jsonplaceholder.typicode.com/users, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>TestAPI</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-13T09:29:15.645772" elapsed="0.000501"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:15.751888" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users/3 
+ path_url=/users/3 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-11-13T09:29:15.751888" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users/3 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 13 Nov 2024 02:29:15 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731464759&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=lDsJAT5FzMc%2FHKyVMuUwmfDntUYRFf67bbBJm%2BK%2BFNo%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731464759&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=lDsJAT5FzMc%2FHKyVMuUwmfDntUYRFf67bbBJm%2BK%2BFNo%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1731464806', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"208-uuwhfwQMzFzbJr9Pg6DKXae0SXA"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '196', 'Server': 'cloudflare', 'CF-RAY': '8e1b5541d97e3fd7-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=24527&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2841&amp;recv_bytes=785&amp;delivery_rate=110858&amp;cwnd=217&amp;unsent_bytes=0&amp;cid=1b6cccd29350d43b&amp;ts=45&amp;x=0"'} 
+ body={
+  "id": 3,
+  "name": "Clementine Bauch",
+  "username": "Samantha",
+  "email": "Nathan@yesenia.net",
+  "address": {
+    "street": "Douglas Extension",
+    "suite": "Suite 847",
+    "city": "McKenziehaven",
+    "zipcode": "59590-4157",
+    "geo": {
+      "lat": "-68.6102",
+      "lng": "-47.0653"
+    }
+  },
+  "phone": "1-463-123-4447",
+  "website": "ramiro.info",
+  "company": {
+    "name": "Romaguera-Jacobson",
+    "catchPhrase": "Face to face bifurcated interface",
+    "bs": "e-enable strategic applications"
+  }
+} 
+ </msg>
+<msg time="2024-11-13T09:29:15.751888" level="INFO">C:\Users\Wilawan\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1056: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg time="2024-11-13T09:29:15.751888" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<var>${res}</var>
+<arg>TestAPI</arg>
+<arg>${user_details_url}</arg>
+<arg>expected_status=${normal_status}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.646273" elapsed="0.105615"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${normal_status}</arg>
+<arg>${res}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.751888" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.751888" level="INFO">${json_res} = {'id': 3, 'name': 'Clementine Bauch', 'username': 'Samantha', 'email': 'Nathan@yesenia.net', 'address': {'street': 'Douglas Extension', 'suite': 'Suite 847', 'city': 'McKenziehaven', 'zipcode': '59590...</msg>
+<var>${json_res}</var>
+<arg>${res.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.751888" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_name} = Clementine Bauch</msg>
+<var>${user_name}</var>
+<arg>${json_res}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_email} = Nathan@yesenia.net</msg>
+<var>${user_email}</var>
+<arg>${json_res}[email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_website} = ramiro.info</msg>
+<var>${user_website}</var>
+<arg>${json_res}[website]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_lat} = -68.6102</msg>
+<var>${user_lat}</var>
+<arg>${json_res}[address][geo][lat]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_lng} = -47.0653</msg>
+<var>${user_lng}</var>
+<arg>${json_res}[address][geo][lng]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_company_name} = Romaguera-Jacobson</msg>
+<var>${user_company_name}</var>
+<arg>${json_res}[company][name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">Length is 16.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${name_result} = True</msg>
+<var>${name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${email_result} = True</msg>
+<var>${email_result}</var>
+<arg>Should Match</arg>
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${website_result} = True</msg>
+<var>${website_result}</var>
+<arg>Should Match</arg>
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${lat_result} = True</msg>
+<var>${lat_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${lng_result} = True</msg>
+<var>${lng_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">Length is 16.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${company_name_result} = True</msg>
+<var>${company_name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${sum_result} = True</msg>
+<var>${sum_result}</var>
+<arg>Should Be True</arg>
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${user_name}</value>
+<value>${user_email}</value>
+<value>${user_website}</value>
+<value>${user_lat}</value>
+<value>${user_lng}</value>
+<value>${user_company_name}</value>
+<value>${sum_result}</value>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_name} = Clementine Bauch</msg>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_email} = Nathan@yesenia.net</msg>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_website} = ramiro.info</msg>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_lat} = -68.6102</msg>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_lng} = -47.0653</msg>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_company_name} = Romaguera-Jacobson</msg>
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${record_valid_detail} = True</msg>
+<var>${user_name}</var>
+<var>${user_email}</var>
+<var>${user_website}</var>
+<var>${user_lat}</var>
+<var>${user_lng}</var>
+<var>${user_company_name}</var>
+<var>${record_valid_detail}</var>
+<arg>${real_id}</arg>
+<status status="PASS" start="2024-11-13T09:29:15.645646" elapsed="0.113753"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">User Name: Clementine Bauch, Email: Nathan@yesenia.net, Website: ramiro.info, lat: -68.6102, lng: -47.0653, Company Name: Romaguera-Jacobson, Record Validation: True</msg>
+<arg>User Name: ${user_name}, Email: ${user_email}, Website: ${user_website}, lat: ${user_lat}, lng: ${user_lng}, Company Name: ${user_company_name}, Record Validation: ${record_valid_detail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${record_valid_detail} == True">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">User "Clementine Bauch" get PASSED result</msg>
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</if>
+<var name="${id}">2</var>
+<status status="PASS" start="2024-11-13T09:29:15.636403" elapsed="0.122996"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${real_id} = 4</msg>
+<var>${real_id}</var>
+<arg>${id}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Retrieve Input">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">${user_details_url} = https://jsonplaceholder.typicode.com/users/4</msg>
+<var>${user_details_url}</var>
+<arg>${url}/${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:15.759399" level="INFO">Creating Session using : alias=TestAPI, url=https://jsonplaceholder.typicode.com/users, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>TestAPI</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:15.867045" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users/4 
+ path_url=/users/4 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users/4 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 13 Nov 2024 02:29:15 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731404640&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=5l1cJRvDiWvv0LxXFAJDvm88gZRQk3N%2BXB0dEZEewpY%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731404640&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=5l1cJRvDiWvv0LxXFAJDvm88gZRQk3N%2BXB0dEZEewpY%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '997', 'X-Ratelimit-Reset': '1731404660', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"20d-8RgvpSlsXJuYWj1NkFA2Hm1U5TI"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '356', 'Server': 'cloudflare', 'CF-RAY': '8e1b554298af4b98-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=24745&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2843&amp;recv_bytes=785&amp;delivery_rate=116015&amp;cwnd=194&amp;unsent_bytes=0&amp;cid=dd12c56b25f60585&amp;ts=40&amp;x=0"'} 
+ body={
+  "id": 4,
+  "name": "Patricia Lebsack",
+  "username": "Karianne",
+  "email": "Julianne.OConner@kory.org",
+  "address": {
+    "street": "Hoeger Mall",
+    "suite": "Apt. 692",
+    "city": "South Elvis",
+    "zipcode": "53919-4257",
+    "geo": {
+      "lat": "29.4572",
+      "lng": "-164.2990"
+    }
+  },
+  "phone": "493-170-9623 x156",
+  "website": "kale.biz",
+  "company": {
+    "name": "Robel-Corkery",
+    "catchPhrase": "Multi-tiered zero tolerance productivity",
+    "bs": "transition cutting-edge web services"
+  }
+} 
+ </msg>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">C:\Users\Wilawan\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1056: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<var>${res}</var>
+<arg>TestAPI</arg>
+<arg>${user_details_url}</arg>
+<arg>expected_status=${normal_status}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.107646"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${normal_status}</arg>
+<arg>${res}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${json_res} = {'id': 4, 'name': 'Patricia Lebsack', 'username': 'Karianne', 'email': 'Julianne.OConner@kory.org', 'address': {'street': 'Hoeger Mall', 'suite': 'Apt. 692', 'city': 'South Elvis', 'zipcode': '53919-4...</msg>
+<var>${json_res}</var>
+<arg>${res.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${user_name} = Patricia Lebsack</msg>
+<var>${user_name}</var>
+<arg>${json_res}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${user_email} = Julianne.OConner@kory.org</msg>
+<var>${user_email}</var>
+<arg>${json_res}[email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${user_website} = kale.biz</msg>
+<var>${user_website}</var>
+<arg>${json_res}[website]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${user_lat} = 29.4572</msg>
+<var>${user_lat}</var>
+<arg>${json_res}[address][geo][lat]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${user_lng} = -164.2990</msg>
+<var>${user_lng}</var>
+<arg>${json_res}[address][geo][lng]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${user_company_name} = Robel-Corkery</msg>
+<var>${user_company_name}</var>
+<arg>${json_res}[company][name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.867045" level="INFO">Length is 16.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${name_result} = True</msg>
+<var>${name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${email_result} = True</msg>
+<var>${email_result}</var>
+<arg>Should Match</arg>
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${website_result} = True</msg>
+<var>${website_result}</var>
+<arg>Should Match</arg>
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${lat_result} = True</msg>
+<var>${lat_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${lng_result} = True</msg>
+<var>${lng_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.867045" level="INFO">Length is 16.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${company_name_result} = True</msg>
+<var>${company_name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${sum_result} = True</msg>
+<var>${sum_result}</var>
+<arg>Should Be True</arg>
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${user_name}</value>
+<value>${user_email}</value>
+<value>${user_website}</value>
+<value>${user_lat}</value>
+<value>${user_lng}</value>
+<value>${user_company_name}</value>
+<value>${sum_result}</value>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${user_name} = Patricia Lebsack</msg>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${user_email} = Julianne.OConner@kory.org</msg>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${user_website} = kale.biz</msg>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${user_lat} = 29.4572</msg>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${user_lng} = -164.2990</msg>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${user_company_name} = Robel-Corkery</msg>
+<msg time="2024-11-13T09:29:15.867045" level="INFO">${record_valid_detail} = True</msg>
+<var>${user_name}</var>
+<var>${user_email}</var>
+<var>${user_website}</var>
+<var>${user_lat}</var>
+<var>${user_lng}</var>
+<var>${user_company_name}</var>
+<var>${record_valid_detail}</var>
+<arg>${real_id}</arg>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.107646"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.867045" level="INFO">User Name: Patricia Lebsack, Email: Julianne.OConner@kory.org, Website: kale.biz, lat: 29.4572, lng: -164.2990, Company Name: Robel-Corkery, Record Validation: True</msg>
+<arg>User Name: ${user_name}, Email: ${user_email}, Website: ${user_website}, lat: ${user_lat}, lng: ${user_lng}, Company Name: ${user_company_name}, Record Validation: ${record_valid_detail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${record_valid_detail} == True">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.867045" level="INFO">User "Patricia Lebsack" get PASSED result</msg>
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.000000"/>
+</if>
+<var name="${id}">3</var>
+<status status="PASS" start="2024-11-13T09:29:15.759399" elapsed="0.107646"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.880776" level="INFO">${real_id} = 5</msg>
+<var>${real_id}</var>
+<arg>${id}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.013731"/>
+</kw>
+<kw name="Retrieve Input">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:15.881484" level="INFO">${user_details_url} = https://jsonplaceholder.typicode.com/users/5</msg>
+<var>${user_details_url}</var>
+<arg>${url}/${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.880956" elapsed="0.000528"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:15.881693" level="INFO">Creating Session using : alias=TestAPI, url=https://jsonplaceholder.typicode.com/users, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>TestAPI</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-13T09:29:15.881591" elapsed="0.000102"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:16.748116" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users/5 
+ path_url=/users/5 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-11-13T09:29:16.748116" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users/5 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 13 Nov 2024 02:29:16 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731392208&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=szbqctN4P54E1rYDo6SNAzRKJKL4jcQuWNUSZQOcM2w%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731392208&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=szbqctN4P54E1rYDo6SNAzRKJKL4jcQuWNUSZQOcM2w%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1731392240', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"1fb-gmS8Go1GsKpTWscwm+5AFpuro+k"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'REVALIDATED', 'Server': 'cloudflare', 'CF-RAY': '8e1b55435f9589aa-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=24664&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2841&amp;recv_bytes=785&amp;delivery_rate=118429&amp;cwnd=214&amp;unsent_bytes=0&amp;cid=7c175c2d96f0c57c&amp;ts=813&amp;x=0"'} 
+ body={
+  "id": 5,
+  "name": "Chelsey Dietrich",
+  "username": "Kamren",
+  "email": "Lucio_Hettinger@annie.ca",
+  "address": {
+    "street": "Skiles Walks",
+    "suite": "Suite 351",
+    "city": "Roscoeview",
+    "zipcode": "33263",
+    "geo": {
+      "lat": "-31.8129",
+      "lng": "62.5342"
+    }
+  },
+  "phone": "(254)954-1289",
+  "website": "demarco.info",
+  "company": {
+    "name": "Keebler LLC",
+    "catchPhrase": "User-centric fault-tolerant solution",
+    "bs": "revolutionize end-to-end systems"
+  }
+} 
+ </msg>
+<msg time="2024-11-13T09:29:16.763854" level="INFO">C:\Users\Wilawan\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1056: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<var>${res}</var>
+<arg>TestAPI</arg>
+<arg>${user_details_url}</arg>
+<arg>expected_status=${normal_status}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-11-13T09:29:15.881693" elapsed="0.882673"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${normal_status}</arg>
+<arg>${res}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${json_res} = {'id': 5, 'name': 'Chelsey Dietrich', 'username': 'Kamren', 'email': 'Lucio_Hettinger@annie.ca', 'address': {'street': 'Skiles Walks', 'suite': 'Suite 351', 'city': 'Roscoeview', 'zipcode': '33263', '...</msg>
+<var>${json_res}</var>
+<arg>${res.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${user_name} = Chelsey Dietrich</msg>
+<var>${user_name}</var>
+<arg>${json_res}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${user_email} = Lucio_Hettinger@annie.ca</msg>
+<var>${user_email}</var>
+<arg>${json_res}[email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${user_website} = demarco.info</msg>
+<var>${user_website}</var>
+<arg>${json_res}[website]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${user_lat} = -31.8129</msg>
+<var>${user_lat}</var>
+<arg>${json_res}[address][geo][lat]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${user_lng} = 62.5342</msg>
+<var>${user_lng}</var>
+<arg>${json_res}[address][geo][lng]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${user_company_name} = Keebler LLC</msg>
+<var>${user_company_name}</var>
+<arg>${json_res}[company][name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.764366" level="INFO">Length is 16.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${name_result} = True</msg>
+<var>${name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${email_result} = True</msg>
+<var>${email_result}</var>
+<arg>Should Match</arg>
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${website_result} = True</msg>
+<var>${website_result}</var>
+<arg>Should Match</arg>
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${lat_result} = True</msg>
+<var>${lat_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${lng_result} = True</msg>
+<var>${lng_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.764366" level="INFO">Length is 16.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${company_name_result} = True</msg>
+<var>${company_name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${sum_result} = True</msg>
+<var>${sum_result}</var>
+<arg>Should Be True</arg>
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${user_name}</value>
+<value>${user_email}</value>
+<value>${user_website}</value>
+<value>${user_lat}</value>
+<value>${user_lng}</value>
+<value>${user_company_name}</value>
+<value>${sum_result}</value>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${user_name} = Chelsey Dietrich</msg>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${user_email} = Lucio_Hettinger@annie.ca</msg>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${user_website} = demarco.info</msg>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${user_lat} = -31.8129</msg>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${user_lng} = 62.5342</msg>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${user_company_name} = Keebler LLC</msg>
+<msg time="2024-11-13T09:29:16.764366" level="INFO">${record_valid_detail} = True</msg>
+<var>${user_name}</var>
+<var>${user_email}</var>
+<var>${user_website}</var>
+<var>${user_lat}</var>
+<var>${user_lng}</var>
+<var>${user_company_name}</var>
+<var>${record_valid_detail}</var>
+<arg>${real_id}</arg>
+<status status="PASS" start="2024-11-13T09:29:15.880956" elapsed="0.883410"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.764366" level="INFO">User Name: Chelsey Dietrich, Email: Lucio_Hettinger@annie.ca, Website: demarco.info, lat: -31.8129, lng: 62.5342, Company Name: Keebler LLC, Record Validation: True</msg>
+<arg>User Name: ${user_name}, Email: ${user_email}, Website: ${user_website}, lat: ${user_lat}, lng: ${user_lng}, Company Name: ${user_company_name}, Record Validation: ${record_valid_detail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${record_valid_detail} == True">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.764366" level="INFO">User "Chelsey Dietrich" get PASSED result</msg>
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.009506"/>
+</kw>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.009506"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:16.773872" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:16.773872" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-13T09:29:16.773872" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-11-13T09:29:16.764366" elapsed="0.009506"/>
+</if>
+<var name="${id}">4</var>
+<status status="PASS" start="2024-11-13T09:29:15.867045" elapsed="0.906827"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.774709" level="INFO">${real_id} = 6</msg>
+<var>${real_id}</var>
+<arg>${id}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.774538" elapsed="0.000171"/>
+</kw>
+<kw name="Retrieve Input">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:16.775329" level="INFO">${user_details_url} = https://jsonplaceholder.typicode.com/users/6</msg>
+<var>${user_details_url}</var>
+<arg>${url}/${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.774872" elapsed="0.000457"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:16.775656" level="INFO">Creating Session using : alias=TestAPI, url=https://jsonplaceholder.typicode.com/users, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>TestAPI</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-13T09:29:16.775557" elapsed="0.000099"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:17.548973" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users/6 
+ path_url=/users/6 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-11-13T09:29:17.548973" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users/6 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 13 Nov 2024 02:29:16 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731219543&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=WhXIriVzeuu6Q32O3kSq7PHNp2LHXqA%2BtA3VreF9Rro%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731219543&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=WhXIriVzeuu6Q32O3kSq7PHNp2LHXqA%2BtA3VreF9Rro%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '980', 'X-Ratelimit-Reset': '1731219562', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"21a-1wY7wF2vqUAj32FSyd4L99yHHc4"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'REVALIDATED', 'Server': 'cloudflare', 'CF-RAY': '8e1b5548f889831f-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=25266&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2842&amp;recv_bytes=785&amp;delivery_rate=112981&amp;cwnd=215&amp;unsent_bytes=0&amp;cid=4a811bccf3b60195&amp;ts=699&amp;x=0"'} 
+ body={
+  "id": 6,
+  "name": "Mrs. Dennis Schulist",
+  "username": "Leopoldo_Corkery",
+  "email": "Karley_Dach@jasper.info",
+  "address": {
+    "street": "Norberto Crossing",
+    "suite": "Apt. 950",
+    "city": "South Christy",
+    "zipcode": "23505-1337",
+    "geo": {
+      "lat": "-71.4197",
+      "lng": "71.7478"
+    }
+  },
+  "phone": "1-477-935-8478 x6430",
+  "website": "ola.org",
+  "company": {
+    "name": "Considine-Lockman",
+    "catchPhrase": "Synchronised bottom-line interface",
+    "bs": "e-enable innovative applications"
+  }
+} 
+ </msg>
+<msg time="2024-11-13T09:29:17.548973" level="INFO">C:\Users\Wilawan\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1056: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg time="2024-11-13T09:29:17.550027" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<var>${res}</var>
+<arg>TestAPI</arg>
+<arg>${user_details_url}</arg>
+<arg>expected_status=${normal_status}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-11-13T09:29:16.775656" elapsed="0.774371"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${normal_status}</arg>
+<arg>${res}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.550027" elapsed="0.001000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.551027" level="INFO">${json_res} = {'id': 6, 'name': 'Mrs. Dennis Schulist', 'username': 'Leopoldo_Corkery', 'email': 'Karley_Dach@jasper.info', 'address': {'street': 'Norberto Crossing', 'suite': 'Apt. 950', 'city': 'South Christy', '...</msg>
+<var>${json_res}</var>
+<arg>${res.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.551027" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.551027" level="INFO">${user_name} = Mrs. Dennis Schulist</msg>
+<var>${user_name}</var>
+<arg>${json_res}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.551027" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.552026" level="INFO">${user_email} = Karley_Dach@jasper.info</msg>
+<var>${user_email}</var>
+<arg>${json_res}[email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.551027" elapsed="0.000999"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.552026" level="INFO">${user_website} = ola.org</msg>
+<var>${user_website}</var>
+<arg>${json_res}[website]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.552026" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.552026" level="INFO">${user_lat} = -71.4197</msg>
+<var>${user_lat}</var>
+<arg>${json_res}[address][geo][lat]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.552026" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.552026" level="INFO">${user_lng} = 71.7478</msg>
+<var>${user_lng}</var>
+<arg>${json_res}[address][geo][lng]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.552026" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.552026" level="INFO">${user_company_name} = Considine-Lockman</msg>
+<var>${user_company_name}</var>
+<arg>${json_res}[company][name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.552026" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.552026" level="INFO">Length is 20.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.552026" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.552026" level="INFO">${name_result} = True</msg>
+<var>${name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.552026" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.552026" elapsed="0.001000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.553026" level="INFO">${email_result} = True</msg>
+<var>${email_result}</var>
+<arg>Should Match</arg>
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.552026" elapsed="0.001000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.553026" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.553026" level="INFO">${website_result} = True</msg>
+<var>${website_result}</var>
+<arg>Should Match</arg>
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.553026" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.553026" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.553026" level="INFO">${lat_result} = True</msg>
+<var>${lat_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.553026" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.553026" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.554033" level="INFO">${lng_result} = True</msg>
+<var>${lng_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.553026" elapsed="0.001007"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.554033" level="INFO">Length is 20.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.554033" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.554033" level="INFO">${company_name_result} = True</msg>
+<var>${company_name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.554033" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.554033" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.554033" level="INFO">${sum_result} = True</msg>
+<var>${sum_result}</var>
+<arg>Should Be True</arg>
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.554033" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${user_name}</value>
+<value>${user_email}</value>
+<value>${user_website}</value>
+<value>${user_lat}</value>
+<value>${user_lng}</value>
+<value>${user_company_name}</value>
+<value>${sum_result}</value>
+<status status="PASS" start="2024-11-13T09:29:17.554033" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-13T09:29:17.554033" level="INFO">${user_name} = Mrs. Dennis Schulist</msg>
+<msg time="2024-11-13T09:29:17.554033" level="INFO">${user_email} = Karley_Dach@jasper.info</msg>
+<msg time="2024-11-13T09:29:17.554033" level="INFO">${user_website} = ola.org</msg>
+<msg time="2024-11-13T09:29:17.554033" level="INFO">${user_lat} = -71.4197</msg>
+<msg time="2024-11-13T09:29:17.554033" level="INFO">${user_lng} = 71.7478</msg>
+<msg time="2024-11-13T09:29:17.554033" level="INFO">${user_company_name} = Considine-Lockman</msg>
+<msg time="2024-11-13T09:29:17.554033" level="INFO">${record_valid_detail} = True</msg>
+<var>${user_name}</var>
+<var>${user_email}</var>
+<var>${user_website}</var>
+<var>${user_lat}</var>
+<var>${user_lng}</var>
+<var>${user_company_name}</var>
+<var>${record_valid_detail}</var>
+<arg>${real_id}</arg>
+<status status="PASS" start="2024-11-13T09:29:16.774872" elapsed="0.779161"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.555033" level="INFO">User Name: Mrs. Dennis Schulist, Email: Karley_Dach@jasper.info, Website: ola.org, lat: -71.4197, lng: 71.7478, Company Name: Considine-Lockman, Record Validation: True</msg>
+<arg>User Name: ${user_name}, Email: ${user_email}, Website: ${user_website}, lat: ${user_lat}, lng: ${user_lng}, Company Name: ${user_company_name}, Record Validation: ${record_valid_detail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.554033" elapsed="0.001000"/>
+</kw>
+<if>
+<branch type="IF" condition="${record_valid_detail} == True">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.555033" level="INFO">User "Mrs. Dennis Schulist" get PASSED result</msg>
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.555033" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.555033" elapsed="0.000693"/>
+</kw>
+<status status="PASS" start="2024-11-13T09:29:17.555033" elapsed="0.000693"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:17.555726" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:17.555726" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-13T09:29:17.555726" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-11-13T09:29:17.555033" elapsed="0.000693"/>
+</if>
+<var name="${id}">5</var>
+<status status="PASS" start="2024-11-13T09:29:16.773872" elapsed="0.781854"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.556489" level="INFO">${real_id} = 7</msg>
+<var>${real_id}</var>
+<arg>${id}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.555726" elapsed="0.000763"/>
+</kw>
+<kw name="Retrieve Input">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.556515" level="INFO">${user_details_url} = https://jsonplaceholder.typicode.com/users/7</msg>
+<var>${user_details_url}</var>
+<arg>${url}/${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.556515" elapsed="0.000000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:17.556515" level="INFO">Creating Session using : alias=TestAPI, url=https://jsonplaceholder.typicode.com/users, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>TestAPI</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-13T09:29:17.556515" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users/7 
+ path_url=/users/7 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users/7 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 13 Nov 2024 02:29:17 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731322767&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=KFLaem1jBBdMNyhnXo58HQQx6LJWKQRo7lQhE1uSqnk%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731322767&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=KFLaem1jBBdMNyhnXo58HQQx6LJWKQRo7lQhE1uSqnk%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '990', 'X-Ratelimit-Reset': '1731322807', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"1f4-3A5OFrElqRDfjuuAAq1cQ05SvNg"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '1499', 'Server': 'cloudflare', 'CF-RAY': '8e1b554dcd7c5feb-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=25063&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2842&amp;recv_bytes=785&amp;delivery_rate=114974&amp;cwnd=250&amp;unsent_bytes=0&amp;cid=302ef7eff2fa4b62&amp;ts=41&amp;x=0"'} 
+ body={
+  "id": 7,
+  "name": "Kurtis Weissnat",
+  "username": "Elwyn.Skiles",
+  "email": "Telly.Hoeger@billy.biz",
+  "address": {
+    "street": "Rex Trail",
+    "suite": "Suite 280",
+    "city": "Howemouth",
+    "zipcode": "58804-1099",
+    "geo": {
+      "lat": "24.8918",
+      "lng": "21.8984"
+    }
+  },
+  "phone": "210.067.6132",
+  "website": "elvis.io",
+  "company": {
+    "name": "Johns Group",
+    "catchPhrase": "Configurable multimedia task-force",
+    "bs": "generate enterprise e-tailers"
+  }
+} 
+ </msg>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">C:\Users\Wilawan\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1056: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<var>${res}</var>
+<arg>TestAPI</arg>
+<arg>${user_details_url}</arg>
+<arg>expected_status=${normal_status}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.557109" elapsed="0.109585"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${normal_status}</arg>
+<arg>${res}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${json_res} = {'id': 7, 'name': 'Kurtis Weissnat', 'username': 'Elwyn.Skiles', 'email': 'Telly.Hoeger@billy.biz', 'address': {'street': 'Rex Trail', 'suite': 'Suite 280', 'city': 'Howemouth', 'zipcode': '58804-1099...</msg>
+<var>${json_res}</var>
+<arg>${res.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${user_name} = Kurtis Weissnat</msg>
+<var>${user_name}</var>
+<arg>${json_res}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${user_email} = Telly.Hoeger@billy.biz</msg>
+<var>${user_email}</var>
+<arg>${json_res}[email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${user_website} = elvis.io</msg>
+<var>${user_website}</var>
+<arg>${json_res}[website]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${user_lat} = 24.8918</msg>
+<var>${user_lat}</var>
+<arg>${json_res}[address][geo][lat]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${user_lng} = 21.8984</msg>
+<var>${user_lng}</var>
+<arg>${json_res}[address][geo][lng]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${user_company_name} = Johns Group</msg>
+<var>${user_company_name}</var>
+<arg>${json_res}[company][name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">Length is 15.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${name_result} = True</msg>
+<var>${name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${email_result} = True</msg>
+<var>${email_result}</var>
+<arg>Should Match</arg>
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${website_result} = True</msg>
+<var>${website_result}</var>
+<arg>Should Match</arg>
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${lat_result} = True</msg>
+<var>${lat_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${lng_result} = True</msg>
+<var>${lng_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">Length is 15.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${company_name_result} = True</msg>
+<var>${company_name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${sum_result} = True</msg>
+<var>${sum_result}</var>
+<arg>Should Be True</arg>
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${user_name}</value>
+<value>${user_email}</value>
+<value>${user_website}</value>
+<value>${user_lat}</value>
+<value>${user_lng}</value>
+<value>${user_company_name}</value>
+<value>${sum_result}</value>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${user_name} = Kurtis Weissnat</msg>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${user_email} = Telly.Hoeger@billy.biz</msg>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${user_website} = elvis.io</msg>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${user_lat} = 24.8918</msg>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${user_lng} = 21.8984</msg>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${user_company_name} = Johns Group</msg>
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${record_valid_detail} = True</msg>
+<var>${user_name}</var>
+<var>${user_email}</var>
+<var>${user_website}</var>
+<var>${user_lat}</var>
+<var>${user_lng}</var>
+<var>${user_company_name}</var>
+<var>${record_valid_detail}</var>
+<arg>${real_id}</arg>
+<status status="PASS" start="2024-11-13T09:29:17.556515" elapsed="0.110179"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">User Name: Kurtis Weissnat, Email: Telly.Hoeger@billy.biz, Website: elvis.io, lat: 24.8918, lng: 21.8984, Company Name: Johns Group, Record Validation: True</msg>
+<arg>User Name: ${user_name}, Email: ${user_email}, Website: ${user_website}, lat: ${user_lat}, lng: ${user_lng}, Company Name: ${user_company_name}, Record Validation: ${record_valid_detail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${record_valid_detail} == True">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">User "Kurtis Weissnat" get PASSED result</msg>
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</if>
+<var name="${id}">6</var>
+<status status="PASS" start="2024-11-13T09:29:17.555726" elapsed="0.110968"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.666694" level="INFO">${real_id} = 8</msg>
+<var>${real_id}</var>
+<arg>${id}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.000000"/>
+</kw>
+<kw name="Retrieve Input">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.677532" level="INFO">${user_details_url} = https://jsonplaceholder.typicode.com/users/8</msg>
+<var>${user_details_url}</var>
+<arg>${url}/${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.677532" elapsed="0.000000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:17.677532" level="INFO">Creating Session using : alias=TestAPI, url=https://jsonplaceholder.typicode.com/users, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>TestAPI</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-13T09:29:17.677532" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:17.784033" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users/8 
+ path_url=/users/8 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-11-13T09:29:17.784033" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users/8 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 13 Nov 2024 02:29:17 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731270431&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=PggevAjwhPPX6O7i6%2F4btdiHCDcNCt%2BCip6DeO5m6BY%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731270431&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=PggevAjwhPPX6O7i6%2F4btdiHCDcNCt%2BCip6DeO5m6BY%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1731270487', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"209-CXz5ZN8wf6UnQeLsUzX00Zh7L2g"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '93', 'Server': 'cloudflare', 'CF-RAY': '8e1b554e8898490c-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=24795&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2842&amp;recv_bytes=785&amp;delivery_rate=114124&amp;cwnd=185&amp;unsent_bytes=0&amp;cid=9506196cf02c5ae7&amp;ts=49&amp;x=0"'} 
+ body={
+  "id": 8,
+  "name": "Nicholas Runolfsdottir V",
+  "username": "Maxime_Nienow",
+  "email": "Sherwood@rosamond.me",
+  "address": {
+    "street": "Ellsworth Summit",
+    "suite": "Suite 729",
+    "city": "Aliyaview",
+    "zipcode": "45169",
+    "geo": {
+      "lat": "-14.3990",
+      "lng": "-120.7677"
+    }
+  },
+  "phone": "586.493.6943 x140",
+  "website": "jacynthe.com",
+  "company": {
+    "name": "Abernathy Group",
+    "catchPhrase": "Implemented secondary concept",
+    "bs": "e-enable extensible e-tailers"
+  }
+} 
+ </msg>
+<msg time="2024-11-13T09:29:17.784033" level="INFO">C:\Users\Wilawan\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1056: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg time="2024-11-13T09:29:17.784033" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<var>${res}</var>
+<arg>TestAPI</arg>
+<arg>${user_details_url}</arg>
+<arg>expected_status=${normal_status}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.677532" elapsed="0.106501"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${normal_status}</arg>
+<arg>${res}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.784033" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.784033" level="INFO">${json_res} = {'id': 8, 'name': 'Nicholas Runolfsdottir V', 'username': 'Maxime_Nienow', 'email': 'Sherwood@rosamond.me', 'address': {'street': 'Ellsworth Summit', 'suite': 'Suite 729', 'city': 'Aliyaview', 'zipcod...</msg>
+<var>${json_res}</var>
+<arg>${res.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.784033" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${user_name} = Nicholas Runolfsdottir V</msg>
+<var>${user_name}</var>
+<arg>${json_res}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.784033" elapsed="0.015719"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${user_email} = Sherwood@rosamond.me</msg>
+<var>${user_email}</var>
+<arg>${json_res}[email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${user_website} = jacynthe.com</msg>
+<var>${user_website}</var>
+<arg>${json_res}[website]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${user_lat} = -14.3990</msg>
+<var>${user_lat}</var>
+<arg>${json_res}[address][geo][lat]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${user_lng} = -120.7677</msg>
+<var>${user_lng}</var>
+<arg>${json_res}[address][geo][lng]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${user_company_name} = Abernathy Group</msg>
+<var>${user_company_name}</var>
+<arg>${json_res}[company][name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.799752" level="INFO">Length is 24.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${name_result} = True</msg>
+<var>${name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${email_result} = True</msg>
+<var>${email_result}</var>
+<arg>Should Match</arg>
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${website_result} = True</msg>
+<var>${website_result}</var>
+<arg>Should Match</arg>
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${lat_result} = True</msg>
+<var>${lat_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${lng_result} = True</msg>
+<var>${lng_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.799752" level="INFO">Length is 24.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${company_name_result} = True</msg>
+<var>${company_name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${sum_result} = True</msg>
+<var>${sum_result}</var>
+<arg>Should Be True</arg>
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${user_name}</value>
+<value>${user_email}</value>
+<value>${user_website}</value>
+<value>${user_lat}</value>
+<value>${user_lng}</value>
+<value>${user_company_name}</value>
+<value>${sum_result}</value>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${user_name} = Nicholas Runolfsdottir V</msg>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${user_email} = Sherwood@rosamond.me</msg>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${user_website} = jacynthe.com</msg>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${user_lat} = -14.3990</msg>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${user_lng} = -120.7677</msg>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${user_company_name} = Abernathy Group</msg>
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${record_valid_detail} = True</msg>
+<var>${user_name}</var>
+<var>${user_email}</var>
+<var>${user_website}</var>
+<var>${user_lat}</var>
+<var>${user_lng}</var>
+<var>${user_company_name}</var>
+<var>${record_valid_detail}</var>
+<arg>${real_id}</arg>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.133058"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.799752" level="INFO">User Name: Nicholas Runolfsdottir V, Email: Sherwood@rosamond.me, Website: jacynthe.com, lat: -14.3990, lng: -120.7677, Company Name: Abernathy Group, Record Validation: True</msg>
+<arg>User Name: ${user_name}, Email: ${user_email}, Website: ${user_website}, lat: ${user_lat}, lng: ${user_lng}, Company Name: ${user_company_name}, Record Validation: ${record_valid_detail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${record_valid_detail} == True">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.799752" level="INFO">User "Nicholas Runolfsdottir V" get PASSED result</msg>
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</if>
+<var name="${id}">7</var>
+<status status="PASS" start="2024-11-13T09:29:17.666694" elapsed="0.133058"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.799752" level="INFO">${real_id} = 9</msg>
+<var>${real_id}</var>
+<arg>${id}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.000000"/>
+</kw>
+<kw name="Retrieve Input">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:17.806374" level="INFO">${user_details_url} = https://jsonplaceholder.typicode.com/users/9</msg>
+<var>${user_details_url}</var>
+<arg>${url}/${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.806374" elapsed="0.000000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:17.807179" level="INFO">Creating Session using : alias=TestAPI, url=https://jsonplaceholder.typicode.com/users, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>TestAPI</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-13T09:29:17.807085" elapsed="0.000153"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:18.668087" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users/9 
+ path_url=/users/9 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-11-13T09:29:18.668087" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users/9 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 13 Nov 2024 02:29:18 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731256010&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=ujVVJM6HIeXrSh2ZlcrUZNlWfqx%2BF60%2FfJN0ed4cHGU%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731256010&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=ujVVJM6HIeXrSh2ZlcrUZNlWfqx%2BF60%2FfJN0ed4cHGU%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '997', 'X-Ratelimit-Reset': '1731256027', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"20b-s6q9RrZIuKoibQPA95Vsu2dPF/s"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'REVALIDATED', 'Server': 'cloudflare', 'CF-RAY': '8e1b554f5824a999-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=24712&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2842&amp;recv_bytes=785&amp;delivery_rate=115593&amp;cwnd=218&amp;unsent_bytes=0&amp;cid=0c7e177bd4bdffa9&amp;ts=806&amp;x=0"'} 
+ body={
+  "id": 9,
+  "name": "Glenna Reichert",
+  "username": "Delphine",
+  "email": "Chaim_McDermott@dana.io",
+  "address": {
+    "street": "Dayna Park",
+    "suite": "Suite 449",
+    "city": "Bartholomebury",
+    "zipcode": "76495-3109",
+    "geo": {
+      "lat": "24.6463",
+      "lng": "-168.8889"
+    }
+  },
+  "phone": "(775)976-6794 x41206",
+  "website": "conrad.com",
+  "company": {
+    "name": "Yost and Sons",
+    "catchPhrase": "Switchable contextually-based project",
+    "bs": "aggregate real-time technologies"
+  }
+} 
+ </msg>
+<msg time="2024-11-13T09:29:18.668087" level="INFO">C:\Users\Wilawan\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1056: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg time="2024-11-13T09:29:18.668087" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<var>${res}</var>
+<arg>TestAPI</arg>
+<arg>${user_details_url}</arg>
+<arg>expected_status=${normal_status}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-11-13T09:29:17.807238" elapsed="0.860849"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${normal_status}</arg>
+<arg>${res}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.668087" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.668087" level="INFO">${json_res} = {'id': 9, 'name': 'Glenna Reichert', 'username': 'Delphine', 'email': 'Chaim_McDermott@dana.io', 'address': {'street': 'Dayna Park', 'suite': 'Suite 449', 'city': 'Bartholomebury', 'zipcode': '76495-3...</msg>
+<var>${json_res}</var>
+<arg>${res.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.668087" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.668087" level="INFO">${user_name} = Glenna Reichert</msg>
+<var>${user_name}</var>
+<arg>${json_res}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.668087" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${user_email} = Chaim_McDermott@dana.io</msg>
+<var>${user_email}</var>
+<arg>${json_res}[email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.668087" elapsed="0.015578"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${user_website} = conrad.com</msg>
+<var>${user_website}</var>
+<arg>${json_res}[website]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${user_lat} = 24.6463</msg>
+<var>${user_lat}</var>
+<arg>${json_res}[address][geo][lat]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${user_lng} = -168.8889</msg>
+<var>${user_lng}</var>
+<arg>${json_res}[address][geo][lng]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${user_company_name} = Yost and Sons</msg>
+<var>${user_company_name}</var>
+<arg>${json_res}[company][name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.683665" level="INFO">Length is 15.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${name_result} = True</msg>
+<var>${name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${email_result} = True</msg>
+<var>${email_result}</var>
+<arg>Should Match</arg>
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${website_result} = True</msg>
+<var>${website_result}</var>
+<arg>Should Match</arg>
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${lat_result} = True</msg>
+<var>${lat_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${lng_result} = True</msg>
+<var>${lng_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.683665" level="INFO">Length is 15.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${company_name_result} = True</msg>
+<var>${company_name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${sum_result} = True</msg>
+<var>${sum_result}</var>
+<arg>Should Be True</arg>
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${user_name}</value>
+<value>${user_email}</value>
+<value>${user_website}</value>
+<value>${user_lat}</value>
+<value>${user_lng}</value>
+<value>${user_company_name}</value>
+<value>${sum_result}</value>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${user_name} = Glenna Reichert</msg>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${user_email} = Chaim_McDermott@dana.io</msg>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${user_website} = conrad.com</msg>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${user_lat} = 24.6463</msg>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${user_lng} = -168.8889</msg>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${user_company_name} = Yost and Sons</msg>
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${record_valid_detail} = True</msg>
+<var>${user_name}</var>
+<var>${user_email}</var>
+<var>${user_website}</var>
+<var>${user_lat}</var>
+<var>${user_lng}</var>
+<var>${user_company_name}</var>
+<var>${record_valid_detail}</var>
+<arg>${real_id}</arg>
+<status status="PASS" start="2024-11-13T09:29:17.806374" elapsed="0.877291"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.683665" level="INFO">User Name: Glenna Reichert, Email: Chaim_McDermott@dana.io, Website: conrad.com, lat: 24.6463, lng: -168.8889, Company Name: Yost and Sons, Record Validation: True</msg>
+<arg>User Name: ${user_name}, Email: ${user_email}, Website: ${user_website}, lat: ${user_lat}, lng: ${user_lng}, Company Name: ${user_company_name}, Record Validation: ${record_valid_detail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${record_valid_detail} == True">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.683665" level="INFO">User "Glenna Reichert" get PASSED result</msg>
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</if>
+<var name="${id}">8</var>
+<status status="PASS" start="2024-11-13T09:29:17.799752" elapsed="0.883913"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.683665" level="INFO">${real_id} = 10</msg>
+<var>${real_id}</var>
+<arg>${id}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.000000"/>
+</kw>
+<kw name="Retrieve Input">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:18.688519" level="INFO">${user_details_url} = https://jsonplaceholder.typicode.com/users/10</msg>
+<var>${user_details_url}</var>
+<arg>${url}/${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.688519" elapsed="0.000000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:18.688519" level="INFO">Creating Session using : alias=TestAPI, url=https://jsonplaceholder.typicode.com/users, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>TestAPI</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-13T09:29:18.688519" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-11-13T09:29:19.437884" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users/10 
+ path_url=/users/10 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-11-13T09:29:19.437884" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users/10 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 13 Nov 2024 02:29:18 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1731464958&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=WcGD1H%2FCi7TSSShvX%2FSv0TIoHSPBGLfFZCECHD%2FwR1c%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1731464958&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=WcGD1H%2FCi7TSSShvX%2FSv0TIoHSPBGLfFZCECHD%2FwR1c%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '996', 'X-Ratelimit-Reset': '1731464986', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"1ff-2iureAUIawGXrTsK9ruBm43T5to"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'MISS', 'Server': 'cloudflare', 'CF-RAY': '8e1b5554da70a8c0-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=24339&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2843&amp;recv_bytes=786&amp;delivery_rate=117984&amp;cwnd=244&amp;unsent_bytes=0&amp;cid=cd53e0e5b604c410&amp;ts=693&amp;x=0"'} 
+ body={
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+} 
+ </msg>
+<msg time="2024-11-13T09:29:19.437884" level="INFO">C:\Users\Wilawan\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1056: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg time="2024-11-13T09:29:19.437884" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<var>${res}</var>
+<arg>TestAPI</arg>
+<arg>${user_details_url}</arg>
+<arg>expected_status=${normal_status}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-11-13T09:29:18.688519" elapsed="0.749365"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${normal_status}</arg>
+<arg>${res}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.437884" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:19.453809" level="INFO">${json_res} = {'id': 10, 'name': 'Clementina DuBuque', 'username': 'Moriah.Stanton', 'email': 'Rey.Padberg@karina.biz', 'address': {'street': 'Kattie Turnpike', 'suite': 'Suite 198', 'city': 'Lebsackbury', 'zipcode...</msg>
+<var>${json_res}</var>
+<arg>${res.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.437884" elapsed="0.015925"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${user_name} = Clementina DuBuque</msg>
+<var>${user_name}</var>
+<arg>${json_res}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${user_email} = Rey.Padberg@karina.biz</msg>
+<var>${user_email}</var>
+<arg>${json_res}[email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${user_website} = ambrose.net</msg>
+<var>${user_website}</var>
+<arg>${json_res}[website]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${user_lat} = -38.2386</msg>
+<var>${user_lat}</var>
+<arg>${json_res}[address][geo][lat]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${user_lng} = 57.2232</msg>
+<var>${user_lng}</var>
+<arg>${json_res}[address][geo][lng]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${user_company_name} = Hoeger LLC</msg>
+<var>${user_company_name}</var>
+<arg>${json_res}[company][name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:19.454319" level="INFO">Length is 18.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${name_result} = True</msg>
+<var>${name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${email_result} = True</msg>
+<var>${email_result}</var>
+<arg>Should Match</arg>
+<arg>${user_email}</arg>
+<arg>${email_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Match" owner="BuiltIn">
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${website_result} = True</msg>
+<var>${website_result}</var>
+<arg>Should Match</arg>
+<arg>${user_website}</arg>
+<arg>${website_pattern}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${lat_result} = True</msg>
+<var>${lat_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lat} &gt;= -90 and ${user_lat} &lt;= 90</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${lng_result} = True</msg>
+<var>${lng_result}</var>
+<arg>Should Be True</arg>
+<arg>${user_lng} &gt;= -180 and ${user_lng} &lt;= 180</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-13T09:29:19.454319" level="INFO">Length is 18.</msg>
+<arg>${user_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${company_name_result} = True</msg>
+<var>${company_name_result}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${user_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${sum_result} = True</msg>
+<var>${sum_result}</var>
+<arg>Should Be True</arg>
+<arg>${name_result} and ${email_result} and ${website_result} and ${lat_result} and ${lng_result} and ${company_name_result}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${user_name}</value>
+<value>${user_email}</value>
+<value>${user_website}</value>
+<value>${user_lat}</value>
+<value>${user_lng}</value>
+<value>${user_company_name}</value>
+<value>${sum_result}</value>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${user_name} = Clementina DuBuque</msg>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${user_email} = Rey.Padberg@karina.biz</msg>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${user_website} = ambrose.net</msg>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${user_lat} = -38.2386</msg>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${user_lng} = 57.2232</msg>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${user_company_name} = Hoeger LLC</msg>
+<msg time="2024-11-13T09:29:19.454319" level="INFO">${record_valid_detail} = True</msg>
+<var>${user_name}</var>
+<var>${user_email}</var>
+<var>${user_website}</var>
+<var>${user_lat}</var>
+<var>${user_lng}</var>
+<var>${user_company_name}</var>
+<var>${record_valid_detail}</var>
+<arg>${real_id}</arg>
+<status status="PASS" start="2024-11-13T09:29:18.688519" elapsed="0.765800"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:19.454319" level="INFO">User Name: Clementina DuBuque, Email: Rey.Padberg@karina.biz, Website: ambrose.net, lat: -38.2386, lng: 57.2232, Company Name: Hoeger LLC, Record Validation: True</msg>
+<arg>User Name: ${user_name}, Email: ${user_email}, Website: ${user_website}, lat: ${user_lat}, lng: ${user_lng}, Company Name: ${user_company_name}, Record Validation: ${record_valid_detail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${record_valid_detail} == True">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-13T09:29:19.454319" level="INFO">User "Clementina DuBuque" get PASSED result</msg>
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get PASSED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User "${username}" get FAILED result</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-11-13T09:29:19.454319" elapsed="0.000000"/>
+</if>
+<var name="${id}">9</var>
+<status status="PASS" start="2024-11-13T09:29:18.683665" elapsed="0.770654"/>
+</iter>
+<var>${id}</var>
+<value>0</value>
+<value>10</value>
+<status status="PASS" start="2024-11-13T09:29:15.362443" elapsed="4.091876"/>
+</for>
+<status status="PASS" start="2024-11-13T09:29:15.362443" elapsed="4.097399"/>
+</test>
+<status status="PASS" start="2024-11-13T09:29:15.148092" elapsed="4.313190"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="API Test">API Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
